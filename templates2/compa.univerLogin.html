@@ -1,0 +1,160 @@
+I <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JobLocator - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light gray background */
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 320px; /* Set a fixed width for the login box */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the JobLocator text */
+        .highlight-job {
+            color: orange;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e68900; /* Darker shade on hover */
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            width: 48%;
+            cursor: pointer;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .social-button img {
+            margin-right: 8px;
+            width: 20px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <!-- Updated JobLocator heading with colored "Job" -->
+        <h2>
+            <span class="highlight-job">Job</span>Locator
+        </h2>
+        
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="emailOrPhone">Email or Phone Number</label>
+                <input type="text" id="emailOrPhone" name="emailOrPhone" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+        
+        <!-- Social Login Options -->
+        <div class="social-login">
+            <div class="social-button" onclick="window.location.href='https://accounts.google.com/'">
+                <img src="https://th.bing.com/th/id/R.167cc8e9e04c052f67f152fb5b2dfd98?rik=%2bmMKN8hSsCdR%2fw&pid=ImgRaw&r=0" alt="Google Logo">
+                Sign in with Google
+            </div>
+            <div class="social-button" onclick="window.location.href='https://appleid.apple.com/'">
+                <img src="https://th.bing.com/th/id/OIP.sWSPghjzvfUYfQpqXbo37wHaIo?rs=1&pid=ImgDetMain">
+                Sign in with Apple
+            </div>
+        </div>
+
+        <!-- Additional Links -->
+        <div class="link">
+            <p>Don't have an account? <a href="./registerAccount.html">Register here</a></p>
+            <p><a href="./index.html">Back to Home</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Company Profile - JobLocator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header styling */
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Logo styling */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: orange;
+        }
+
+        .logo span {
+            color: white; /* "Locator" in white */
+        }
+
+        /* Navigation */
+        .header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .header nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Main content styling */
+        .main-content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e68a00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <!-- Logo -->
+        <div class="logo">
+            Job<span>Locator</span>
+        </div>
+        <!-- Navigation -->
+        <nav>
+            <a href="overview.html">Overview</a>
+            <a href="../jobLocator/index.html">Home</a>
+            <a href="../companymessagingcenter.html">Notifications</a>
+            <a href="../login.html">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <h2>Company Profile</h2>
+        <form action="update-profile.php" method="POST"> <!-- Change action to your processing script -->
+            <label for="name">Company Name</label>
+            <input type="text" id="name" name="name" value="JobLocator Inc." required>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" value="123 Job Lane, Talent City, USA" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="contact@joblocator.com" required>
+
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website" value="https://www.joblocator.com" required>
+
+            <label for="overview">Company Overview</label>
+            <textarea id="overview" name="overview" rows="4" required>JobLocator is dedicated to connecting talented individuals with their dream jobs. Our mission is to provide a seamless job search experience, offering innovative solutions for both job seekers and employers.</textarea>
+
+            <label for="mission">Mission Statement</label>
+            <textarea id="mission" name="mission" rows="4" required>To empower individuals in their career journey through technology and support, while providing businesses with the tools they need to find the best talent.</textarea>
+
+            <button type="submit">Update Profile</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="help-center.html">Help Center</a>
+        &copy; 2024 JobLocator | All Rights Reserved
+    </footer>
+
+</body>
+</html>

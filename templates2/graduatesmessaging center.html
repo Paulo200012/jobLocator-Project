@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Messaging Center - JobLocator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header styling */
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Logo styling */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: orange;
+        }
+
+        .logo span {
+            color: white; /* "Locator" in white */
+        }
+
+        /* Navigation */
+        .header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .header nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            background-color: #333;
+            color: white;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        /* Main content styling */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            height: 90vh;
+        }
+
+        /* New message button styling */
+        .new-message-btn {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .new-message-btn:hover {
+            background-color: #e68a00;
+        }
+
+        /* Message list styling */
+        .message-list {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .message-list h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .message-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .message-item:last-child {
+            border-bottom: none;
+        }
+
+        .message-item:hover {
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+
+        .message-item h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .message-item p {
+            margin: 5px 0;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .message-item .date {
+            color: #999;
+            font-size: 12px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <!-- Logo -->
+        <div class="logo">
+            Job<span>Locator</span>
+        </div>
+        <!-- Navigation -->
+        <nav>
+            <a href="../loginpages/companyprofile.html">Profile</a>
+            <a href="../jobLocator/index.html">Home</a>
+            <a href="../login.html">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="javascript:void(0)" class="new-message-btn" onclick="openNewMessage()">+ New Message</a>
+        <a href="inbox.html">Inbox</a>
+        <a href="sent.html">Sent</a>
+        <a href="starred.html">Starred</a>
+        <a href="drafts.html">Drafts</a>
+        <a href="all-messages.html">All Messages</a>
+        <a href="spam.html">Spam</a>
+        <a href="bin.html">Bin</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <h2>Inbox</h2> <!-- Default section is Inbox -->
+        <div class="message-list">
+            <!-- Example message -->
+            <div class="message-item" onclick="openMessage()">
+                <h3>Subject: Welcome to JobLocator</h3>
+                <p>Sender: admin@joblocator.com</p>
+                <p class="date">Received: September 25, 2024</p>
+            </div>
+
+            <div class="message-item" onclick="openMessage()">
+                <h3>Subject: Job Application Update</h3>
+                <p>Sender: hr@techcorp.com</p>
+                <p class="date">Received: September 20, 2024</p>
+            </div>
+
+            <!-- More message items can be added here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="help-center.html">Help Center</a>
+        &copy; 2024 JobLocator | All Rights Reserved
+    </footer>
+
+    <script>
+        function openNewMessage() {
+            alert("Opening new message form...");
+            // Logic to open new message form can go here
+        }
+
+        function openMessage() {
+            alert("Opening message details...");
+            // Logic to open message details can go here
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Manage Applications - JobLocator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header styling */
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: orange;
+        }
+
+        .logo span {
+            color: white; /* "Locator" in white */
+        }
+
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .header nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Main content styling */
+        .main-content {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons for viewing data */
+        .view-button {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+
+        .view-button:hover {
+            background-color: orange;
+        }
+
+        /* Candidate List */
+        .candidate-list {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hidden */
+        }
+
+        .candidate-list h3 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .candidate-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .candidate-item:last-child {
+            border-bottom: none;
+        }
+
+        .candidate-item p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .candidate-item .name {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .candidate-item .email {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            Job<span>Locator</span>
+        </div>
+        <nav>
+            <a href="../loginpages/companyprofile.html">Profile</a>
+            <a href="../jobLocator/index.html">Home</a>
+            <a href="../login.html">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <h2>Manage Applications</h2>
+
+        <!-- Buttons -->
+        <button class="view-button" onclick="viewApplications()">View Number of Applications Submitted</button>
+        <button class="view-button" onclick="viewCandidates()">View Qualified Candidates</button>
+
+        <!-- Display number of applications -->
+        <p id="applications-submitted" style="font-size: 18px; font-weight: bold; color: #007bff;"></p>
+
+        <!-- Qualified Candidates List -->
+        <div class="candidate-list" id="qualified-candidates">
+            <h3>Qualified Candidates</h3>
+
+            <!-- Candidate Item 1 -->
+            <div class="candidate-item">
+                <p class="name">John Doe</p>
+                <p class="email">johndoe@example.com</p>
+                <p>Skills: Java, Python, AWS</p>
+            </div>
+
+            <!-- Candidate Item 2 -->
+            <div class="candidate-item">
+                <p class="name">Jane Smith</p>
+                <p class="email">janesmith@example.com</p>
+                <p>Skills: React, Node.js, Docker</p>
+            </div>
+
+            <!-- Candidate Item 3 -->
+            <div class="candidate-item">
+                <p class="name">David Brown</p>
+                <p class="email">davidbrown@example.com</p>
+                <p>Skills: C++, Linux, Kubernetes</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="help-center.html">Help Center</a>
+        &copy; 2024 JobLocator | All Rights Reserved
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@16.0.2"></script>
+    <script>
+        function viewApplications() {
+            // Simulate retrieving the number of applications submitted (you would normally pull this from a database)
+            const applicationsCount = 25;
+            document.getElementById("applications-submitted").textContent = "Total Applications Submitted: " + applicationsCount;
+        }
+
+        function viewCandidates() {
+            // Show the qualified candidates list (you would normally pull this data from a database)
+            document.getElementById("qualified-candidates").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

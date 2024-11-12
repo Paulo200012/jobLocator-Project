@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>University Portal - JobLocator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header styling */
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Logo styling */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: orange;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        /* Title styling */
+        .title {
+            font-size: 36px;
+            color: white;
+        }
+
+        /* Logout link styling */
+        .logout {
+            color: orange;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+
+        .logout:hover {
+            background-color: #575757;
+            color: white;
+        }
+
+        /* Main content styling */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .section-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px 0;
+            width: 80%;
+            max-width: 600px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: orange;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            Job<span>Locator</span>
+        </div>
+        <h1 class="title">University Portal</h1>
+        <a href="./login.html" class="logout">Log out</a>
+    </header>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <!-- Add Graduates -->
+        <div class="section-box" onclick="location.href='add-graduates.html'">
+            <h2>Add Graduates</h2>
+            <p>Add graduate information to the JobLocator platform to enhance their job search prospects.</p>
+        </div>
+
+        <!-- Manage Graduates -->
+        <div class="section-box" onclick="location.href='manage-graduates.html'">
+            <h2>Manage Graduates</h2>
+            <p>View, update, and manage the graduate profiles registered with JobLocator.</p>
+        </div>
+
+        <!-- Generate Reports -->
+        <div class="section-box" onclick="location.href='generate-reports.html'">
+            <h2>Generate Reports</h2>
+            <p>Generate employment and job placement reports for graduates registered through the university.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 JobLocator | University Portal
+    </footer>
+
+</body>
+</html>

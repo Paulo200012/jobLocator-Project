@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Graduate Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .profile-container {
+            width: 60%;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: orange;
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .info-section {
+            background-color: #f4f4f4;
+            border-left: 5px solid orange;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-section label {
+            font-weight: bold;
+            color: grey;
+            font-size: 18px;
+        }
+
+        .info-section span {
+            color: black;
+            font-size: 16px;
+        }
+
+        /* Profile icon decoration */
+        .profile-icon {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, orange, #f4f4f4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-icon img {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- Profile Icon -->
+        <div class="profile-icon">
+            <img src="https://via.placeholder.com/100" alt="Profile Icon">
+        </div>
+
+        <h2>Graduate Profile</h2>
+
+        <div class="profile-info">
+            <!-- Name -->
+            <div class="info-section">
+                <label for="name">Name:</label>
+                <span>Julia Hasotuali</span>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="info-section">
+                <label for="dob">Date of Birth:</label>
+                <span>December 20 2000</span>
+            </div>
+
+            <!-- Gender -->
+            <div class="info-section">
+                <label for="gender">Gender:</label>
+                <span>Female</span>
+            </div>
+
+            <!-- Citizenship -->
+            <div class="info-section">
+                <label for="citizenship">Citizenship:</label>
+                <span>Angolan</span>
+            </div>
+
+            <!-- Marital Status -->
+            <div class="info-section">
+                <label for="marital-status">Marital Status:</label>
+                <span>Single</span>
+            </div>
+
+            <!-- Email Address -->
+            <div class="info-section">
+                <label for="email">Email Address:</label>
+                <span>juxapaulo@g.com</span>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="info-section">
+                <label for="phone">Phone Number:</label>
+                <span>+264 817092556</span>
+            </div>
+
+            <!-- Postal Address -->
+            <div class="info-section">
+                <label for="address">Postal Address:</label>
+                <span>Hochland Park, Albatross 19, Windhoek</span>
+            </div>
+
+            <!-- Qualification -->
+            <div class="info-section">
+                <label for="qualification">Qualification:</label>
+                <span>Bachelor of Science in Computer Science</span>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@16.0.2"></script>
+    <script src="../appwrite/graduatesProfile.js"></script>
+</body>
+</html>
